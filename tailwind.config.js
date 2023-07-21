@@ -14,7 +14,10 @@ module.exports = {
       },
       colors: {
         darkBg: '#141414'
-      }
+      },
+      gridTemplateColumns: {
+        'auto-fill': 'repeat(auto-fill, minmax(300px, 1fr))',
+      },
     },
   },
   plugins: [],
