@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import React, { PropsWithChildren, Suspense } from 'react'
 import { Xamicalli } from './Xamicalli'
-import { Environment, OrbitControls, ScrollControls, Stars, Circle } from '@react-three/drei';
+import { Environment, OrbitControls, ScrollControls, Stars, Circle, Extrude } from '@react-three/drei';
 import { Stars as MyStars } from './Stars';
 import { CircleLines } from './CircleLines'
 import * as THREE from 'three';
@@ -16,6 +16,16 @@ const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
 lines.add(cube);
 export const ThreeScene = ({ children }: Props) => {
+
+    const circleShape = new THREE.Shape();
+    circleShape.absarc(0, 0, 2.5, 0, Math.PI * 2, false);
+
+    // Definimos los parámetros para la extrusión
+    const extrudeSettings = {
+        steps: 64,
+        depth: 1, // Profundidad del objeto
+        bevelEnabled: false,
+    };
     return (
         <div
             className='h-[100vh] w-[100%] bg-black'
@@ -32,8 +42,8 @@ export const ThreeScene = ({ children }: Props) => {
                         < Stars />
                         <MyStars />
                         < CircleLines numLines={450} radius={7} lineWidth={0.1} />
-                        <Circle args={[2.5, 64]} position={[0, 0, 0.0002]}>
-                            <meshBasicMaterial color="black" />
+                        <Circle args={[2.5, 64]} position={[0, 0, .006]}>
+                            <meshPhongMaterial attach="material" color="black" />
                         </Circle>
                         <Circle args={[7.5, 64]} position={[0, 0, 0.0001]}>
                             <meshBasicMaterial color="#9d6e3e" transparent opacity={0.2} />

@@ -13,7 +13,7 @@ export function Xamicalli(props) {
           receiveShadow
           geometry={nodes.Curve.geometry}
           material={materials.gold}
-          position={[0.08, -.13, .29]}
+          position={[0.08, -.13, .3]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={28.577}
         />
