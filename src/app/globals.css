@@ -5,3 +5,110 @@
 /* body {
     color: #9d6e3e;
 } */
+
+.cls-1 {
+    stroke: #e09945;
+    stroke-width: 24px;
+  }
+
+  .cls-1, .cls-2, .cls-3 {
+    fill: none;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-2 {
+    stroke: #cc7e3f;
+    stroke-width: 42px;
+  }
+
+  .cls-3 {
+    stroke: #f7e3bd;
+    stroke-width: 13px;
+  }
+
+  .cls-4 {
+    fill: #e09945;
+  }
+
+  .cls-4, .cls-5 {
+    fill-rule: evenodd;
+  }
+
+  .cls-5 {
+    fill: #f4e4c1;
+  }
+
+  #pupila {
+    box-shadow: 0 -10px 10px 15px rgb(0, 0, 0), 0 10px 15px 10px rgb(255, 255, 255, 0.5);
+  }
+
+  .circle {
+    filter: drop-shadow(0 0 10px #ffffff);
+  }
+
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .stars {
+      background: black url('/stars.png') repeat;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      z-index: -1000;
+  }
+  
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1000;
+      
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+      
+  }

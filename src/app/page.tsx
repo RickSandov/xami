@@ -1,14 +1,14 @@
 'use client'
 
-import { ThreeScene, Sphere } from '@/components'
-import { OrbitControls, Stars } from '@react-three/drei'
-import Image from 'next/image'
-
+import { Hero } from '@/components/Hero'
 
 export default function Home() {
   return (
     <>
-      <ThreeScene />
+      {/* <ThreeScene /> */}
+      <div className="stars"></div>
+      <div className="twinkling"></div>
+      <Hero />
     </>
   )
 }
