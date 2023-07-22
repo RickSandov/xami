@@ -22,7 +22,7 @@ const LogoIllustration = ({ numLines, radius }: { numLines: number, radius: numb
 
     function audioAnalyzer() {
         // create a new AudioContext
-        const audioCtx = new (window.AudioContext)();
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         // create an analyzer node with a buffer size of 2048
         const analyzer = audioCtx.createAnalyser();
         analyzer.fftSize = 1024;
@@ -72,8 +72,9 @@ const LogoIllustration = ({ numLines, radius }: { numLines: number, radius: numb
         <div className="relative h-40 w-40 overflow-visible" onClick={() => {
             audioElmRef.current!.play();
         }}>
-            <audio controls className='absolute -bottom-[100%] hidden' ref={audioElmRef}>
-                <source src="/music.mp3" />
+            <audio controls autoPlay className='absolute -bottom-[100%] hidden' ref={audioElmRef}>
+                <source src="/music.mp3" type="audio/mpeg" />
+                tu navegador no permite la reproducción de audios
             </audio>
             <Logo className='fill-yellow-500 z-50' />
             {/* SVG */}
