@@ -36,10 +36,10 @@ export const NextEvent = () => {
     }, [])
 
     return (
-        <section ref={imgRef} className='w-full h-[95vh] flex flex-col justify-between items-center mt-16 relative gap-16' >
+        <main ref={imgRef} className='w-full h-[90vh] flex flex-col justify-between items-center mt-16 relative gap-16' >
             <img className='max-h-full z-20' src={event.img} alt="" />
             <EventInfo />
-        </section >
+        </main >
     )
 }
 

@@ -10,6 +10,7 @@ import { Navbar } from '@/components/Navbar'
 import { Logo } from '@/components/svg'
 import Lenis from '@studio-freight/lenis'
 import { NextEvent } from '@/components/sections/NextEvent'
+import { About } from '@/components/sections/About'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -96,6 +97,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <NextEvent />
+      <About />
       <Events />
       <div ref={backgroundRef} className='fixed inset-0 bg-black -z-50'>
       </div>
