@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const dosis = Dosis({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" >
-      <body className={`${inter.className} bg-black`}>{children}</body>
+      <body className={`${dosis.className} bg-black`}>{children}</body>
     </html>
   )
 }
