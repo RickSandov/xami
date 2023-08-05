@@ -2,6 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { twMerge } from 'tailwind-merge'
 
 const navItems: {
     to: string,
@@ -71,7 +72,7 @@ export const Navbar = () => {
                 navItems.map(({ content, to }, i) => {
                     const isHomeItem = to === '#home';
                     return (
-                        <a key={i} id={`${isHomeItem ? 'homeAnchor' : i}`} className={`w-14 text-white text-lg text-center ${isHomeItem ? 'opacity-0 w-0' : ''}`}>
+                        <a key={i} id={`${isHomeItem ? 'homeAnchor' : i}`} className={twMerge('w-14 text-white text-lg text-center ', isHomeItem ? 'opacity-0 w-0' : '')}>
                             {content()}
                         </a>
                     )

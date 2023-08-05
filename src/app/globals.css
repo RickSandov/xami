@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
 
 .cls-1 {
     stroke: #e09945;
@@ -44,6 +59,9 @@
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   }
 
+  .particle {
+    box-shadow: 0 0 4px 4px rgb(213, 145, 0)
+  }
 
 
 /* @keyframes move-background {

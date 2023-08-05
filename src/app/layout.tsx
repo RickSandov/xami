@@ -1,4 +1,6 @@
+
 import './globals.css'
+
 import { Dosis } from 'next/font/google'
 
 const dosis = Dosis({ subsets: ['latin'] });
