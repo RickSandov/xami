@@ -115,9 +115,28 @@ import { Logo, Xamiclub, LogoWhite } from '../svg';
 import { gsap } from 'gsap';
 
 export const Hero = () => {
+
+    const nextEventRef = useRef<HTMLDivElement | null>(null);
+
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: nextEventRef.current,
+    //             start: 'top bottom-=200',
+    //             end: 'bottom+=100 center',
+    //             scrub: true,
+    //             // markers: true
+    //         }
+    //     })
+
+    //     tl.to(nextEventRef.current, {
+    //         y: 300
+    //     })
+    // })
+
     return (
-        <header className='relative min-h-[95vh] flex justify-center items-center'>
-            <div className='absolute bottom-0 text-white flex flex-col items-center justify-between gap-2 mb-3' >
+        <header className='min-h-[95vh] flex justify-center items-end z-10'>
+            <div ref={nextEventRef} className=' w-full text-white flex flex-col items-center justify-between gap-2 mb-3' >
                 <div className='h-8 w-8'>
                     {/* <LogoWhite /> */}
                     <Logo color='fill-white' />

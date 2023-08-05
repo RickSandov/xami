@@ -9,6 +9,7 @@ import Events from '@/components/sections/Events'
 import { Navbar } from '@/components/Navbar'
 import { Logo } from '@/components/svg'
 import Lenis from '@studio-freight/lenis'
+import { NextEvent } from '@/components/sections/NextEvent'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,12 +34,19 @@ export default function Home() {
     gsap.ticker.add(ticker);
     gsap.ticker.lagSmoothing(0);
 
+    return () => {
+
+    };
+  }, [])
+
+  useLayoutEffect(() => {
     // particles background 
     let width = 0, height = 0;
 
     if (backgroundRef.current) {
       const particleCount = 100;
       const container = backgroundRef.current;
+      container.innerHTML = '';
 
       width = container.offsetWidth;
       height = container.offsetHeight;
@@ -46,6 +54,7 @@ export default function Home() {
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('span');
         'absolute w-2 h-2 bg-white rounded-full'.split(' ').forEach((className) => particle.classList.add(className));
+        // 'absolute w-2 h-2 bg-[#ff6a00] rounded-full'.split(' ').forEach((className) => particle.classList.add(className));
         container.appendChild(particle);
         gsap.set(particle, {
           x: gsap.utils.random(0, width),
@@ -77,7 +86,7 @@ export default function Home() {
     return () => {
 
     }
-  }, [])
+  }, [window.innerWidth, window.innerHeight])
 
 
   return (
@@ -86,6 +95,7 @@ export default function Home() {
       <LogoIllustration radius={150} numLines={450} />
       <Navbar />
       <Hero />
+      <NextEvent />
       <Events />
       <div ref={backgroundRef} className='fixed inset-0 bg-black -z-50'>
       </div>
