@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useLayoutEffect, useRef } from 'react'
 import { Xamicalli } from '../svg/Xamicalli'
 import { gsap } from 'gsap'
