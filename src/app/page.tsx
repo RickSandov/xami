@@ -11,7 +11,9 @@ import { Logo } from '@/components/svg'
 import Lenis from '@studio-freight/lenis'
 import { NextEvent } from '@/components/sections/NextEvent'
 import { About } from '@/components/sections/About'
+import { Source_Code_Pro } from 'next/font/google'
 
+const source = Source_Code_Pro({ subsets: ['latin'] });
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -96,6 +98,7 @@ export default function Home() {
       <LogoIllustration radius={150} numLines={450} />
       <Navbar />
       <Hero />
+      <p className={`${source.className} text-white`}>hola</p>
       <NextEvent />
       <About />
       <Events />
@@ -203,7 +206,7 @@ const LogoIllustration = ({ radius, numLines }: { radius: number, numLines: numb
           !audioAnalizerExists && audioAnalyzer();
         }}>
           <audio className='absolute -bottom-[100%] left-0 hidden' ref={audioElmRef}>
-            <source src="/music2.mp3" type="audio/mpeg" />
+            <source src="/JimiJules-DontTakeItPersonal64kbps.mp3" type="audio/mpeg" />
             tu navegador no permite la reproducción de audios
           </audio>
           <Logo />

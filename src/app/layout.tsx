@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" >
-      <body className={`${dosis.className} bg-black`}>{children}</body>
+      <body className={`${dosis.className} bg-black max-w-[100vw] overflow-x-hidden`}>{children}</body>
     </html>
   )
 }
