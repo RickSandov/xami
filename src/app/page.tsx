@@ -56,7 +56,7 @@ export default function Home() {
 
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('span');
-        'absolute w-2 h-2 bg-white rounded-full'.split(' ').forEach((className) => particle.classList.add(className));
+        'absolute w-2 h-2 bg-[#ffaa4f] rounded-full'.split(' ').forEach((className) => particle.classList.add(className));
         // 'absolute w-2 h-2 bg-[#ff6a00] rounded-full'.split(' ').forEach((className) => particle.classList.add(className));
         container.appendChild(particle);
         gsap.set(particle, {
@@ -70,7 +70,7 @@ export default function Home() {
     }
     function animate(el: HTMLSpanElement) {
       gsap.to(el, {
-        duration: 150,
+        duration: 50,
         x: gsap.utils.random(0, width),
         y: gsap.utils.random(0, height),
         repeat: -1,
@@ -98,7 +98,6 @@ export default function Home() {
       <LogoIllustration radius={150} numLines={450} />
       <Navbar />
       <Hero />
-      <p className={`${source.className} text-white`}>hola</p>
       <NextEvent />
       <About />
       <Events />
