@@ -13,7 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        darkBg: '#141414'
+        darkBg: '#141414',
+        primary: '#ff7b00'
       },
       gridTemplateColumns: {
         'auto-fill': 'repeat(auto-fill, minmax(300px, 1fr))',

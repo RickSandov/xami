@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
@@ -59,103 +63,43 @@
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   }
 
-  /* .particle {
-    box-shadow: 0 0 4px 4px #ff7b00;
-  } */
+  #pista {
+    background-image: url('/pista.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* color: rgb(0, 0, 0); */
+  }
 
 
-/* @keyframes move-background {
-    from {
-          -webkit-transform: translate3d(0px, 0px, 0px);
-      }
-      to { 
-          -webkit-transform: translate3d(1000px, 0px, 0px);
-      }
+  .img:hover .info {
+    transform: translate(0);
   }
-  @-webkit-keyframes move-background {
-    from {
-          -webkit-transform: translate3d(0px, 0px, 0px);
-      }
-      to { 
-          -webkit-transform: translate3d(1000px, 0px, 0px);
-      }
-  }
+
+
+.vynil {
+  perspective: 100px;
+}
+
+.stylus {
+  /* aspect-ratio: 543.6/1250; */
+transform-origin: right center;
+/* transform: rotate(-90deg); */
+/* transform: rotate(-25deg); */
+filter: grayscale(1) drop-shadow(10px 10px 10px rgba(0, 0, 0, 1));
+} ;
+
+.light {
+  pointer-events: none;
+}
+
+.nexus img {
+  aspect-ratio: 500/645.19;
+} 
   
-  @-moz-keyframes move-background {    
-      from {
-          -webkit-transform: translate3d(0px, 0px, 0px);
-      }
-      to { 
-          -webkit-transform: translate3d(1000px, 0px, 0px);
-      }
-  } */
-  
-  /* .stars {
-      background: black url('/stars.png') repeat;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: block;
-      z-index: -1000;
+ 
 
-      -moz-animation:rotate 70s linear infinite, pulse 1s linear infinite;
-    -ms-animation:rotate 70s linear infinite;
-    -o-animation:rotate 70s linear infinite;
-    -webkit-animation:rotate 70s linear infinite;
-    animation:rotate 70s linear infinite;
-  }
-  
-  .twinkling{
-      width:10000px;
-      height: 100%;
-      background: transparent url("/twinkling.png") repeat;
-      background-size: 1000px 1000px;
-      position: fixed;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1000;
-      
-      -moz-animation:move-background 70s linear infinite;
-    -ms-animation:move-background 70s linear infinite;
-    -o-animation:move-background 70s linear infinite;
-    -webkit-animation:move-background 70s linear infinite;
-    animation:move-background 70s linear infinite;
-      
-  } */
-
-  /* @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes pulse {
-    from {
-      scale: 1;
-    }
-    to {
-      scale: 1.5;
-    }
-  } */
+.nexus::after {
+  box-shadow: 0 -50px 40px rgb(0, 0, 0);
+}

@@ -1,43 +1,101 @@
 'use client'
 import { gsap } from 'gsap';
-import React, { useLayoutEffect, useRef } from 'react'
+import Image from 'next/image';
+import React, { useLayoutEffect, useRef, useState } from 'react'
+import { Tilt } from 'react-tilt';
 
 // will receive props
 
 const event = {
     img: '/redjungle.png',
-    title: 'Red Jungle',
-    date: 'sábado 05'
+    slogan: '#BIMTENYEARS',
+    title: 'BORN IN MEXICO 10 YEARS',
+    date: 'sábado 19 de agosto',
+    color: '#575757',
+    description: 'La séptima fiesta del aniversario 10 de BORN IN MEXICO llega a XAMICALLI, una fiesta que sin duda no te puedes perder.',
+    djs: [
+        {
+            name: 'mysteryaffair',
+            to: 'https://www.instagram.com/mysteryaffair/'
+        },
+        {
+            name: 'vongold',
+            to: 'https://www.instagram.com/vongold_/'
+        },
+    ],
+    tickets: 'https://www.eventbrite.com.mx/e/born-in-mexico-10-years-tickets-679828233547',
+    flyer: '/flyer.png',
+    patrons: [
+        {
+            name: 'jagermeistermx',
+            to: 'https://www.instagram.com/jagermeistermx/'
+        },
+        {
+            name: 'redbullmexico',
+            to: 'https://www.instagram.com/redbullmexico/'
+        },
+        {
+            name: 'dosequismx',
+            to: 'https://www.instagram.com/dosequismx/'
+        },
+    ],
 }
 export const NextEvent = () => {
 
-    const imgRef = useRef<HTMLImageElement | null>(null);
+    const { title, description, djs, tickets, flyer, patrons } = event;
 
-    useLayoutEffect(() => {
-
-        const imageTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: imgRef.current,
-                start: 'top-=100 bottom+=200',
-                end: 'top center+=20%',
-                scrub: true,
-                // markers: true
-            }
-        })
-
-        imageTl.fromTo(imgRef.current, {
-            y: 300,
-        },
-            {
-                y: -300,
-            })
-
-
-    }, [])
+    const defaultOptions = {
+        reverse: false,  // reverse the tilt direction
+        max: 35,     // max tilt rotation (degrees)
+        perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
+        scale: 1.1,    // 2 = 200%, 1.5 = 150%, etc..
+        speed: 1,   // Speed of the enter/exit transition
+        transition: true,   // Set a transition on enter/exit.
+        axis: null,   // What axis should be disabled. Can be X or Y.
+        reset: true,    // If the tilt effect has to be reset on exit.
+        easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+    }
 
     return (
-        <main ref={imgRef} className='w-full h-[90vh] flex flex-col justify-between items-center mt-16 relative gap-16' >
-            <img className='max-h-full z-20' src={event.img} alt="" />
+        <main id='proximo' className='relative flex flex-col items-center justify-start w-full gap-8 py-16' >
+            <Tilt options={defaultOptions} className='relative w-[500px] max-w-full aspect-square duration-1000' >
+                <Image priority alt={title} src={flyer} fill className='object-contain' />
+            </Tilt>
+            {/* <EventInfo /> */}
+            <div className='my-5 w-[500px] max-w-[95%] flex flex-col items-center gap-4 text-center text-white'>
+                <h2 className='text-4xl text-[#ff7b00]'>{title}</h2>
+                <p>{description}</p>
+                <ul className='mt-3 text-lg' >
+                    {djs.map((dj, i) => (
+                        <li key={i}>
+                            <a href={dj.to}
+                                target="_blank"
+                                rel="noreferrer"
+                                className='text-[#ff7b00] hover:text-white underline'
+                            >
+                                @{dj.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+                <ul>
+                    {patrons.map((patron, i) => (
+                        <li key={i}>
+                            <a href={patron.to}
+                                target="_blank"
+                                rel="noreferrer"
+                                className='text-white hover:text-[#ff7b00]'
+                            >
+                                @{patron.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+                <div className='flex flex-wrap items-center justify-center gap-4 mt-3' >
+                    <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#ff7b00] py-2 px-5 flex-1 rounded-sm bg-[#ff7b00] hover:bg-white'>Tickets</a>
+                    <a href={`.${flyer}`} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#ff7b00] py-2 px-5 flex-1 rounded-sm bg-[#ff7b00] hover:bg-white'>Flyer</a>
+                </div>
+            </div>
             <EventInfo />
         </main >
     )
@@ -83,8 +141,8 @@ const EventInfo = () => {
     }, [])
 
     return (
-        <div className='text-white w-full uppercase font-bold whitespace-nowrap' >
-            <p ref={dateRef} className='block p-0 m-0 text-lg relative text-[#ff7b00]'>
+        <div className='w-full font-bold text-white uppercase whitespace-nowrap' >
+            <p ref={dateRef} className={`block p-0 m-0 text-lg relative text-[#727473]`}>
                 {
                     Array.from({ length: 20 }).map((_, i) => {
                         return (
@@ -100,7 +158,7 @@ const EventInfo = () => {
                     Array.from({ length: 20 }).map((_, i) => {
                         return (
                             <span key={i} className='mx-5'>
-                                {`${event.title}`}
+                                {`${event.slogan}`}
                             </span>
                         )
                     })

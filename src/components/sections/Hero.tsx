@@ -1,5 +1,84 @@
 'use client'
 
+import React, { useRef } from 'react';
+import { Logo, Xamiclub } from '../svg';
+import { PlayArrow, ArrowDown } from '../svg';
+import { Source_Code_Pro } from 'next/font/google'
+import Lenis from '@studio-freight/lenis';
+const source = Source_Code_Pro({ subsets: ['latin'] });
+
+export const Hero = ({ isPlaying }: { isPlaying: boolean }) => {
+
+    const nextEventRef = useRef<HTMLDivElement | null>(null);
+
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: nextEventRef.current,
+    //             start: 'top bottom-=200',
+    //             end: 'bottom+=100 center',
+    //             scrub: true,
+    //             // markers: true
+    //         }
+    //     })
+
+    //     tl.to(nextEventRef.current, {
+    //         y: 300
+    //     })
+    // })
+
+    return (
+        <header className='min-h-[95vh] flex justify-center items-end z-10 relative'>
+
+            {/* Make it conditional if audio not playing */}
+            {
+                !isPlaying ? (
+                    <div className="animate-pulse flex items-end justify-start absolute z-30 top-[62%] left-1/2 -translate-x-1/2">
+                        <div className="w-8 h-10">
+                            <PlayArrow />
+                        </div>
+                        <p className='font-mono text-xs text-white'>play me</p>
+                    </div>
+                ) : null
+            }
+
+            <div ref={nextEventRef} className='flex flex-col items-center justify-between w-full gap-2 mb-3 text-white ' >
+                <div className='w-8 h-8'>
+                    {/* <LogoWhite /> */}
+                    <Logo color='fill-white' />
+                </div>
+                <h1 className='text-3xl text-center uppercase'>
+                    PRÓXIMO EVENTO
+                    {/* ¡Happy Birthday! */}
+                    {/* <strong className='block text-xl'>francisco diez</strong> */}
+                </h1>
+                <div className='w-28 max-w-[95%]'>
+                    <Xamiclub />
+                </div>
+                <div
+                    onClick={() => {
+                        const nextEvent = document.querySelector('#proximo');
+                        var headerOffset = 65;
+                        var elementPosition = nextEvent!.getBoundingClientRect().top;
+                        var offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth",
+                        });
+                    }}
+                    className='mt-2 scale-110 stroke-white animate-bounce' >
+                    <ArrowDown />
+                </div>
+            </div>
+        </header>
+    );
+};
+
+
+
+
+
 // import React, { useEffect, useRef, useState } from 'react'
 // import { Logo } from './Logo'
 
@@ -86,71 +165,25 @@
 //         return Math.floor(randomNumber)
 //     }
 //     return (
-//         <div className="relative h-40 w-40 overflow-visible" onClick={() => {
+//         <div className="relative w-40 h-40 overflow-visible" onClick={() => {
 //             audioElmRef.current!.play();
 //         }}>
 //             <audio controls autoPlay className='absolute -bottom-[100%] left-0' ref={audioElmRef}>
 //                 <source src="/music2.mp3" type="audio/mpeg" />
 //                 tu navegador no permite la reproducción de audios
 //             </audio>
-//             <Logo className='fill-yellow-500 z-50' />
+//             <Logo className='z-50 fill-yellow-500' />
 //             <svg
 //                 width={radius * 2}
 //                 height={radius * 2}
 //                 viewBox={`-${radius} -${radius} ${radius * 2} ${radius * 2}`}
-//                 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 overflow-visible'
+//                 className='absolute overflow-visible -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-20'
 //             >
 //                 {lines}
 //             </svg>
 //             {/* <div className="absolute inset-0 -z-20 bg-yellow-600 opacity-20 scale-[2] rounded-full"></div> */}
-//             <div id='pupila' className="absolute inset-4 -z-10 bg-black rounded-full"></div>
+//             <div id='pupila' className="absolute bg-black rounded-full inset-4 -z-10"></div>
 //         </div>
 
 //     );
 // };
-
-
-import React, { useLayoutEffect, useRef, useState } from 'react';
-import { Logo, Xamiclub, LogoWhite } from '../svg';
-import { gsap } from 'gsap';
-
-export const Hero = () => {
-
-    const nextEventRef = useRef<HTMLDivElement | null>(null);
-
-    // useLayoutEffect(() => {
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: nextEventRef.current,
-    //             start: 'top bottom-=200',
-    //             end: 'bottom+=100 center',
-    //             scrub: true,
-    //             // markers: true
-    //         }
-    //     })
-
-    //     tl.to(nextEventRef.current, {
-    //         y: 300
-    //     })
-    // })
-
-    return (
-        <header className='min-h-[95vh] flex justify-center items-end z-10'>
-            <div ref={nextEventRef} className=' w-full text-white flex flex-col items-center justify-between gap-2 mb-3' >
-                <div className='h-8 w-8'>
-                    {/* <LogoWhite /> */}
-                    <Logo color='fill-white' />
-                </div>
-                <h1 className='text-center uppercase text-3xl'>
-                    PRÓXIMO EVENTO
-                    {/* ¡Happy Birthday! */}
-                    {/* <strong className='block text-xl'>francisco diez</strong> */}
-                </h1>
-                <div className='w-28 max-w-[95%]'>
-                    <Xamiclub />
-                </div>
-            </div>
-        </header>
-    );
-};
-

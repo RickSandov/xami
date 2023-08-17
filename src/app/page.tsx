@@ -11,13 +11,13 @@ import { Logo } from '@/components/svg'
 import Lenis from '@studio-freight/lenis'
 import { NextEvent } from '@/components/sections/NextEvent'
 import { About } from '@/components/sections/About'
-import { Source_Code_Pro } from 'next/font/google'
-
-const source = Source_Code_Pro({ subsets: ['latin'] });
+import Image from 'next/image'
+import { Contact } from '@/components/sections/Contact'
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const backgroundRef = useRef<HTMLDivElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -95,20 +95,24 @@ export default function Home() {
   return (
     // <ReactLenis>
     <>
-      <LogoIllustration radius={150} numLines={450} />
+
       <Navbar />
-      <Hero />
+      <Hero isPlaying={isPlaying} />
       <NextEvent />
+      <div id='pista' className='relative w-full h-40' >
+      </div>
       <About />
+      <Contact />
       <Events />
       <div ref={backgroundRef} className='fixed inset-0 bg-black -z-50'>
       </div>
+      <LogoIllustration radius={150} numLines={450} setIsPlaying={setIsPlaying} />
       {/* </ReactLenis> */}
     </>
   )
 }
 
-const LogoIllustration = ({ radius, numLines }: { radius: number, numLines: number }) => {
+const LogoIllustration = ({ radius, numLines, setIsPlaying }: { radius: number, numLines: number, setIsPlaying: (value: boolean) => void }) => {
   const audioElmRef = useRef<HTMLAudioElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [audioAnalizerExists, setAudioAnalizerExists] = useState(false);
@@ -197,15 +201,20 @@ const LogoIllustration = ({ radius, numLines }: { radius: number, numLines: numb
   }
 
   return (
-    <div className='fixed inset-0 z-30 pointer-events-none ' >
-      <div className="relative w-full h-full flex justify-center items-center">
+    <div className='fixed inset-0 z-50 pointer-events-none ' >
+      <div className="relative flex items-center justify-center w-full h-full">
         <div ref={logoRef} className="absolute -translate-y-4 pointer-events-auto h-40 w-40 overflow-visible scale-[100%]" onClick={() => {
-          // audioElmRef.current!.play();
-          audioElmRef.current!.paused ? audioElmRef.current!.play() : audioElmRef.current!.pause();
+          if (audioElmRef.current!.paused) {
+            setIsPlaying(true)
+            audioElmRef.current!.play()
+          } else {
+            setIsPlaying(false)
+            audioElmRef.current!.pause()
+          }
           !audioAnalizerExists && audioAnalyzer();
         }}>
           <audio className='absolute -bottom-[100%] left-0 hidden' ref={audioElmRef}>
-            <source src="/JimiJules-DontTakeItPersonal64kbps.mp3" type="audio/mpeg" />
+            <source src="/TrippyCandy_(OriginalMix).mp3" type="audio/mpeg" />
             tu navegador no permite la reproducción de audios
           </audio>
           <Logo />
@@ -213,9 +222,9 @@ const LogoIllustration = ({ radius, numLines }: { radius: number, numLines: numb
             ref={canvasRef}
             width={radius * 2}
             height={radius * 2}
-            className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 overflow-visible'
+            className='absolute overflow-visible -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-20'
           />
-          <div id='pupila' className="absolute inset-4 -z-10 bg-black rounded-full">
+          <div id='pupila' className="absolute bg-black rounded-full inset-4 -z-10">
             .
           </div>
           {/* <div className="absolute inset-0 -z-20 bg-yellow-600 opacity-20 scale-[2] rounded-full"></div> */}
