@@ -17,7 +17,6 @@ export const Contact = () => {
                 start: 'top bottom',
                 end: 'top top-=1000',
                 scrub: true,
-                markers: true
             }
         })
 
