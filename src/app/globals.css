@@ -108,6 +108,6 @@ filter: grayscale(1) drop-shadow(10px 10px 10px rgba(0, 0, 0, 1));
   /* overflow-y: visible; */
 }
 
-.background-light {
+/* .background-light {
   box-shadow: 0 0 1500px #3c1a00;
-}
+} */
