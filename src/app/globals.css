@@ -107,3 +107,7 @@ filter: grayscale(1) drop-shadow(10px 10px 10px rgba(0, 0, 0, 1));
 #nosotros {
   /* overflow-y: visible; */
 }
+
+.background-light {
+  box-shadow: 0 0 3000px #522300;
+}

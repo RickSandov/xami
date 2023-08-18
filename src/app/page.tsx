@@ -106,6 +106,9 @@ export default function Home() {
       <Events />
       <div ref={backgroundRef} className='fixed inset-0 bg-black -z-50'>
       </div>
+      <div className='fixed -bottom-[2000px] left-0 w-[2000px] rounded-full background-light h-[2000px] -z-50' />
+      <div className='fixed -bottom-[2000px] right-0 w-[2000px] rounded-full background-light h-[2000px] -z-50' />
+
       <LogoIllustration radius={150} numLines={450} setIsPlaying={setIsPlaying} />
       {/* </ReactLenis> */}
     </>
