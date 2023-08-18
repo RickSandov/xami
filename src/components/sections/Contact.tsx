@@ -46,7 +46,7 @@ export const Contact = () => {
             <div className="relative md:absolute md:translate-x-0 md:left-[100px] w-[400px] max-w-[90%] -mt-28 md:mt-0">
                 <div ref={nexusRef} className="-bottom-44 md:-bottom-48  relative w-full h-full nexus after:absolute after:w-full after:h-32 after:left-0 after:top-[68%]">
                     <img src="/nexus.png" alt="" className='object-contain w-full h-full ' />
-                    <a href='' className='absolute top-[20%] left-1/2 -translate-x-1/2 text-xs  text-[#A9BAC1]'>gusfavela<strong className='font-black text-[#1A305D]' >@xamicalli.com</strong> </a>
+                    <a href='' className='absolute top-[20%] left-1/2 -translate-x-1/2 text-xs  text-[#BFF4FB]'>gusfavela<strong className='font-black text-[#3C8EE5]' >@xamicalli.com</strong> </a>
                 </div>
             </div>
         </section>

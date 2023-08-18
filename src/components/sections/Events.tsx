@@ -29,7 +29,59 @@ const Events = () => {
     const listRef = useRef<HTMLUListElement | null>(null);
 
 
-    // useLayoutEffect(() => {
+    const loadMore = () => {
+        const newVisibleCount = visibleCount + itemsPerPage;
+        setVisibleEvents(events.slice(0, newVisibleCount));
+        setVisibleCount(newVisibleCount);
+    };
+
+    useLayoutEffect(() => {
+        // Animación de scroll horizontal utilizando GSAP
+        const list = listRef.current;
+        if (list) {
+            gsap.to(listRef.current, {
+                x: () => -(list.scrollWidth - list.clientWidth), // Scroll horizontal
+                ease: 'power2',
+                scrollTrigger: {
+                    trigger: listRef.current,
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: 1, // Hace que el scroll sea más suave
+                },
+            });
+        }
+    }, []);
+
+    return (
+        <section id='eventos' className='inset-0 flex flex-col items-center justify-center p-4 py-16 mt-24 relative -top-[100px]' >
+            <h1 ref={titleRef} className='mb-8 text-5xl text-center text-white uppercase'> Eventos</h1>
+            <ul ref={listRef} className='grid w-full gap-8 grid-cols-auto-fill auto-rows-auto'>
+                {visibleEvents.map((event, index) => (
+                    <li className='relative w-full overflow-hidden text-white h-44 img event-item' key={index} >
+                        <div className='info transition-all absolute bottom-0 left-0 z-10 w-full bg-[#000000b1] translate-y-full p-3 flex justify-between items-center' >
+                            <div>
+                                <h3 className='font-bold' >{event.title}</h3>
+                                <p className='text-xs' >{event.date}</p>
+                            </div>
+                            <a href="#" className='text-white max-w-full transition-colors hover:text-[#ff7b00] py-1 px-3 rounded-sm bg-[#ff7b00] hover:bg-white'>Ver</a>
+                        </div>
+                        <Image className='object-cover' fill src={event.image} alt={event.title} />
+                    </li>
+                ))}
+            </ul>
+            {visibleCount < events.length && (
+                <button className="z-50 p-3 mx-auto mt-8 text-white transition-colors rounded-sm hover:text-primary bg-primary hover:bg-white" onClick={loadMore}>
+                    Cargar más
+                </button>
+            )}
+
+        </section >
+    )
+}
+
+export default Events
+
+ // useLayoutEffect(() => {
 
 
     //     const sections = gsap.utils.toArray('.event-item');
@@ -54,41 +106,6 @@ const Events = () => {
     // }, [sectionLenght]);
 
 
-
-    const loadMore = () => {
-        const newVisibleCount = visibleCount + itemsPerPage;
-        setVisibleEvents(events.slice(0, newVisibleCount));
-        setVisibleCount(newVisibleCount);
-    };
-
-    return (
-        <section id='eventos' className='inset-0 p-4 py-16 mt-24' >
-            <h1 ref={titleRef} className='mb-8 text-5xl text-center text-white uppercase'> Eventos</h1>
-            <ul ref={listRef} className='flex items-center overflow-scroll flex-nowrap'>
-                {visibleEvents.map((event, index) => (
-                    <li className='relative text-white min-w-[300px] h-44 img event-item' key={index} >
-                        <div className='info transition-all absolute bottom-0 left-0 z-10 w-full bg-[#000000b1] translate-y-full p-3 flex justify-between items-center' >
-                            <div>
-                                <h3 className='font-bold' >{event.title}</h3>
-                                <p className='text-xs' >{event.date}</p>
-                            </div>
-                            <a href="#" className='text-white max-w-full transition-colors hover:text-[#ff7b00] py-1 px-3 rounded-sm bg-[#ff7b00] hover:bg-white'>Ver</a>
-                        </div>
-                        <Image className='object-cover' fill src={event.image} alt={event.title} />
-                    </li>
-                ))}
-                {visibleCount < events.length && (
-                    <button className="z-50 p-3 mx-auto text-white transition-colors rounded-sm hover:text-primary bg-primary hover:bg-white" onClick={loadMore}>
-                        Cargar más
-                    </button>
-                )}
-            </ul>
-
-        </section >
-    )
-}
-
-export default Events
 
 
 // const eventsRef = useRef<HTMLUListElement | null>(null)

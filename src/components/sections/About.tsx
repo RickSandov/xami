@@ -48,13 +48,11 @@ export const About = () => {
                 // rotateY: 25,
                 rotateX: 140,
                 rotateY: 25,
-                scale: 1.2,
             }, {
                 // rotateX: 120,
                 // rotateY: 25,
                 rotateX: 140,
                 rotateY: 25,
-                scale: 1.2,
             })
 
             const stylusTl = gsap.timeline({
@@ -100,9 +98,9 @@ export const About = () => {
 
     return (
         <section className='p-4 min-h-[50vh] flex items-center justify-start relative my-10 overflow-y-visible' >
-            <div ref={lightRef} className='absolute inset-0 z-50 light ' >
+            < div ref={lightRef} className='absolute inset-0 z-50 light ' >
 
-            </div>
+            </div >
             <div className="z-20 md:ml-28 md:mt-14">
                 <h2 className='text-2xl font-bold text-center text-white uppercase'>¿Qué es Xamicalli?</h2>
                 <div className='lg:w-[700px] max-w-[95%] mx-auto text-center mt-10 mb-20' >
@@ -119,7 +117,7 @@ export const About = () => {
             </div>
             <div className='absolute z-10 top-2/3 w-full translate-x-1/2 -translate-y-1/2 right-[10%] md:w-1/2 aspect-square '>
                 <div className="relative flex items-center justify-center w-full h-full">
-                    <div ref={discContainerRef} className='w-full h-full vynil'>
+                    <div ref={discContainerRef} className='w-full h-full scale-90 vynil md:scale-125'>
                         <Image ref={discRef} fill src='/vinyl.png' alt='' className='w-full h-full' />
                     </div>
 

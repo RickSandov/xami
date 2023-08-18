@@ -58,13 +58,13 @@ export const NextEvent = () => {
 
     return (
         <main id='proximo' className='relative flex flex-col items-center justify-start w-full gap-8 py-16' >
-            <Tilt options={defaultOptions} className='relative w-[500px] max-w-full aspect-square duration-1000' >
+            <Tilt options={defaultOptions} className='relative w-[500px] max-w-[90%] aspect-square duration-1000' >
                 <Image priority alt={title} src={flyer} fill className='object-contain' />
             </Tilt>
             {/* <EventInfo /> */}
-            <div className='my-5 w-[500px] max-w-[95%] flex flex-col items-center gap-4 text-center text-white'>
-                <h2 className='text-4xl text-[#ff7b00]'>{title}</h2>
-                <p>{description}</p>
+            <div className='my-5 w-[500px] max-w-[95%] flex flex-col items-center gap-4 text-center text-white text-sm'>
+                <h2 className='text-2xl text-[#ff7b00]'>{title}</h2>
+                <p className='text-sm' >{description}</p>
                 <ul className='mt-3 text-lg' >
                     {djs.map((dj, i) => (
                         <li key={i}>
@@ -93,10 +93,11 @@ export const NextEvent = () => {
                 </ul>
                 <div className='flex flex-wrap items-center justify-center gap-4 mt-3' >
                     <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#ff7b00] py-2 px-5 flex-1 rounded-sm bg-[#ff7b00] hover:bg-white'>Tickets</a>
-                    <a href={`.${flyer}`} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#ff7b00] py-2 px-5 flex-1 rounded-sm bg-[#ff7b00] hover:bg-white'>Flyer</a>
                 </div>
             </div>
-            <EventInfo />
+            <div className='w-full overflow-hidden' >
+                <EventInfo />
+            </div>
         </main >
     )
 }
