@@ -47,7 +47,7 @@ export const events: {
   {
     title: "Iñigo",
     date: "Sábado, 28 Enero de 2022",
-    image: "/images/Iñigo_portada.jpg",
+    image: "/images/Inigo_portada.jpeg",
   },
   {
     title: "Jungla Fría Fiesta del Abrazo",
@@ -77,7 +77,7 @@ export const events: {
   {
     title: "Kawas",
     date: "Sábado, 17 de Septiembre de 2022",
-    image: "/images/Golden_Galaxy_portada.png",
+    image: "/images/Kawas_portada.png",
   },
   {
     title: "Golden Galaxy",
@@ -182,7 +182,7 @@ export const events: {
   {
     title: "Dave Seaman",
     date: "Sábado, 10 de Julio de 2021",
-    image: "/images/Dave_Seaman_portada.png",
+    image: "/images/Dave_Seaman_portada.webp",
     href: "https://www.facebook.com/media/set/?vanity=xamicalliclub&set=a.2501054583312943",
   },
   {
@@ -298,7 +298,7 @@ export const events: {
   {
     title: "Dave Seaman",
     date: "Sábado, 16 de Marzo de 2019",
-    image: "/images/Dave_Seaman_portada.png",
+    image: "/images/Dave_Seaman_portada.webp",
   },
   {
     title: "Gabriel Sordo",
@@ -318,7 +318,7 @@ export const events: {
   {
     title: "Watty",
     date: "Viernes, 10 de agosto de 2018",
-    image: "/images/Watty_portada.png",
+    image: "/images/Watty_portada.webp",
   },
   {
     title: "Gino Rodríguez",
@@ -388,7 +388,7 @@ export const events: {
   {
     title: "WATTY",
     date: "Viernes, 18 de agosto de 2017",
-    image: "/images/WATTY_portada.png",
+    image: "/images/WATTY_portada.webp",
   },
   {
     title: "Miguel Campbell",
