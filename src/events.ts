@@ -41,7 +41,7 @@ export const events: {
   {
     title: "Iñigo",
     date: "Sábado, 28 Enero de 2022",
-    image: "/images/Iñigo_portada.png",
+    image: "/images/Iñigo_portada.jpg",
   },
   {
     title: "Jungla Fría Fiesta del Abrazo",
@@ -261,7 +261,7 @@ export const events: {
   {
     title: "Dave Seaman",
     date: "Sábado, 16 de Marzo de 2019 ",
-    image: "/images/Dave_Seaman_portada.png",
+    image: "/images/Dave_Seaman_portada.webp",
   },
   {
     title: "Gabriel Sordo",
@@ -349,9 +349,9 @@ export const events: {
     image: "/images/Balcazar_portada.png",
   },
   {
-    title: "WATTY",
+    title: "Watty",
     date: "Viernes, 18 de agosto de 2017",
-    image: "/images/WATTY_portada.png",
+    image: "/images/WATTY_portada.webp",
   },
   {
     title: "Miguel Campbell",
@@ -436,7 +436,7 @@ export const events: {
   {
     title: "PATO WATSON",
     date: "Sábado, 23 de abril de 2016 ",
-    image: "/images/PATO_WATSON_portada.png",
+    image: "/images/PATO_WATSON_portada.webp",
   },
   {
     title: "DJ ARC",
