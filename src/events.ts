@@ -4,6 +4,81 @@ export const events: {
   image: string;
 }[] = [
   {
+    title: "Pride",
+    date: "Sábado, 01 Julio 2023.",
+    image: "/images/Pride_portada.png",
+  },
+  {
+    title: "Viva la Noche",
+    date: "Sábado, 24 Junio 2023.",
+    image: "/images/VLN_portada.png",
+  },
+  {
+    title: "Osmos",
+    date: "Sábado, 10 Junio 2023.",
+    image: "/images/Osmos_Portada.png",
+  },
+  {
+    title: "Dave Seaman",
+    date: "Sábado, 29 Abril 2023. Happy Bithday Dave",
+    image: "/images/Dave_portada.png",
+  },
+  {
+    title: "Jungla",
+    date: "Sábado, 01 Abril 2023",
+    image: "/images/Jungla_portada.png",
+  },
+  {
+    title: "Chinatown",
+    date: "",
+    image: "/images/Chinatown_portada.png",
+  },
+  {
+    title: "Rotate Cabizbajo",
+    date: "Sábado, 18 Febrero de 2022",
+    image: "/images/Rotate_portada.png",
+  },
+  {
+    title: "Iñigo",
+    date: "Sábado, 28 Enero de 2022",
+    image: "/images/Iñigo_portada.png",
+  },
+  {
+    title: "Jungla Fría Fiesta del Abrazo",
+    date: "Domingo, 25 Diciembre de 2022",
+    image: "/images/Jungla_Fria_portada.png",
+  },
+  {
+    title: "Kolombo Xamicalli 7th",
+    date: "Sábado, 10 Diciembre de 2022",
+    image: "/images/Kolombo_x7.png",
+  },
+  {
+    title: "Halloween 2022",
+    date: "29/30 Octubre de 2022",
+    image: "/images/Halloween_2022_portada.png",
+  },
+  {
+    title: "Fairy Jungle",
+    date: "Happy Bithday Azul Ibeth",
+    image: "/images/Fairy_Portada.png",
+  },
+  {
+    title: "Robbie Akbal",
+    date: "Sábado, 01 de Obtubre de 2022",
+    image: "/images/Robbie_Akbal.png",
+  },
+  {
+    title: "Kawas",
+    date: "Sábado, 17 de Septiembre de 2022",
+    image: "/images/Golden_Galaxy_portada.png",
+  },
+  {
+    title: "Golden Galaxy",
+    date: "Sábado, 03 de Septiembre de 2022",
+    image: "/images/Golden_Galaxy_portada.png",
+  },
+  {
     title: "Victoria Engel",
     date: "Sábado, 09 de Julio de 2022",
     image: "/images/Victoria_Engel_portada.png",
