@@ -63,7 +63,7 @@ const Events = () => {
                                 <h3 className='font-bold' >{event.title}</h3>
                                 <p className='text-xs' >{event.date}</p>
                             </div>
-                            <a target='_blank' href="https://www.instagram.com/xamicalli/" className='text-white max-w-full transition-colors hover:text-[#ff7b00] py-1 px-3 rounded-sm bg-[#ff7b00] hover:bg-white'>Ver</a>
+                            <a target='_blank' href={event.href || 'https://www.instagram.com/xamicalli/'} className='text-white max-w-full transition-colors hover:text-[#ff7b00] py-1 px-3 rounded-sm bg-[#ff7b00] hover:bg-white'>Ver</a>
                         </div>
                         <Image className='object-cover' fill src={event.image} alt={event.title} />
                     </li>
