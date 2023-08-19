@@ -5,6 +5,11 @@ export const events: {
   href?: string;
 }[] = [
   {
+    title: "Red Jungle",
+    date: "Sábado, 05 Agosto 2023. Happy Birthday Francisco Diez",
+    image: "/images/Red_Jungle_portada.png",
+  },
+  {
     title: "Pride",
     date: "Sábado, 01 Julio 2023.",
     image: "/images/Pride_portada.png",
