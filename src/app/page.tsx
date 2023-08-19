@@ -204,7 +204,7 @@ const LogoIllustration = ({ radius, numLines, setIsPlaying }: { radius: number, 
   }
 
   return (
-    <div className='fixed inset-0 z-50 pointer-events-none ' >
+    <div className='fixed inset-0 z-50 pointer-events-none max-w-[100vw]' >
       <div className="relative flex items-center justify-center w-full h-full">
         <div ref={logoRef} className="absolute -translate-y-4 pointer-events-auto h-40 w-40 overflow-visible scale-[100%]" onClick={() => {
           if (audioElmRef.current!.paused) {

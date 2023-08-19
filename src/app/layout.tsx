@@ -25,7 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body className={`${poppins.className} bg-black max-w-[100vw] overflow-x-hidden`}
-      >{children}</body>
+      >
+        <div className="max-w-full overflow-x-hidden">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

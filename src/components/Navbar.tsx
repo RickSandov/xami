@@ -71,7 +71,7 @@ export const Navbar = () => {
     }, [])
 
     return (
-        <nav className="fixed top-0 left-0 z-40 flex items-center justify-center w-full gap-4 p-4 bg-black">
+        <nav className="fixed top-0 left-0 z-40 flex items-center justify-center w-full gap-5 p-4 bg-black">
             {
                 navItems.map(({ content, to }, i) => {
                     const isHomeItem = to === '#home';
