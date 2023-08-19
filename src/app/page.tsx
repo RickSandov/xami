@@ -217,7 +217,7 @@ const LogoIllustration = ({ radius, numLines, setIsPlaying }: { radius: number, 
           !audioAnalizerExists && audioAnalyzer();
         }}>
           <audio className='absolute -bottom-[100%] left-0 hidden' ref={audioElmRef}>
-            <source src="/TrippyCandy_(OriginalMix).mp3" type="audio/mpeg" />
+            <source src="/CANNCION_WEB.mp3" type="audio/mpeg" />
             tu navegador no permite la reproducción de audios
           </audio>
           <Logo />

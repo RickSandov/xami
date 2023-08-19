@@ -33,10 +33,7 @@ export const Hero = ({ isPlaying }: { isPlaying: boolean }) => {
             {/* Make it conditional if audio not playing */}
             {
                 !isPlaying ? (
-                    <div className="animate-pulse flex items-end justify-start absolute z-30 top-[62%] left-1/2 -translate-x-1/2">
-                        <div className="w-8 h-10">
-                            <PlayArrow />
-                        </div>
+                    <div className="absolute z-30 flex items-end justify-start translate-x-[150px] animate-pulse top-1/2 right-1/2">
                         <p className='font-mono text-xs text-white'>play me</p>
                     </div>
                 ) : null
