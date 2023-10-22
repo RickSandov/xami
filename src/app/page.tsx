@@ -1,7 +1,6 @@
 'use client'
 
 import { useLayoutEffect, useRef, useState } from 'react'
-// import { ReactLenis } from '@studio-freight/react-lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Hero } from '@/components/sections/Hero'
@@ -11,7 +10,6 @@ import { Logo } from '@/components/svg'
 import Lenis from '@studio-freight/lenis'
 import { NextEvent } from '@/components/sections/NextEvent'
 import { About } from '@/components/sections/About'
-import Image from 'next/image'
 import { Contact } from '@/components/sections/Contact'
 
 gsap.registerPlugin(ScrollTrigger);

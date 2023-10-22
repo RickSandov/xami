@@ -4,7 +4,6 @@ import { events } from '@/events'
 import { gsap } from 'gsap'
 import Image from 'next/image'
 import React, { useLayoutEffect, useRef, useState } from 'react'
-import { Tilt } from 'react-tilt'
 
 const defaultOptions = {
     reverse: true,  // reverse the tilt direction
@@ -81,29 +80,29 @@ const Events = () => {
 
 export default Events
 
- // useLayoutEffect(() => {
+// useLayoutEffect(() => {
 
 
-    //     const sections = gsap.utils.toArray('.event-item');
-    //     setSectionLenght(sections.length);
+//     const sections = gsap.utils.toArray('.event-item');
+//     setSectionLenght(sections.length);
 
-    //     console.log({ length: sections.length })
+//     console.log({ length: sections.length })
 
-    //     const scrollTween = gsap.to(sections, {
-    //         xPercent: -100,
-    //         ease: 'none',
-    //         scrollTrigger: {
-    //             trigger: listRef.current,
-    //             pin: true,
-    //             scrub: true,
-    //             end: '+=3000'
-    //         }
-    //     })
+//     const scrollTween = gsap.to(sections, {
+//         xPercent: -100,
+//         ease: 'none',
+//         scrollTrigger: {
+//             trigger: listRef.current,
+//             pin: true,
+//             scrub: true,
+//             end: '+=3000'
+//         }
+//     })
 
-    //     return () => {
+//     return () => {
 
-    //     };
-    // }, [sectionLenght]);
+//     };
+// }, [sectionLenght]);
 
 
 
@@ -112,41 +111,41 @@ export default Events
 
 // useLayoutEffect(() => {
 
-    // let observer = new IntersectionObserver((entries, self) => {
-    //     let targets = entries.map((entry) => {
-    //         if (entry.isIntersecting) {
-    //             self.unobserve(entry.target);
-    //             return entry.target;
-    //         }
-    //     })
+// let observer = new IntersectionObserver((entries, self) => {
+//     let targets = entries.map((entry) => {
+//         if (entry.isIntersecting) {
+//             self.unobserve(entry.target);
+//             return entry.target;
+//         }
+//     })
 
-    //     gsap.to(targets, {
-    //         opacity: 1,
-    //         y: 20
-    //     })
-    // })
+//     gsap.to(targets, {
+//         opacity: 1,
+//         y: 20
+//     })
+// })
 
-    // let targets = document.querySelectorAll('.img')
-    // targets.forEach((target) => {
-    //     observer.observe(target);
-    // })
+// let targets = document.querySelectorAll('.img')
+// targets.forEach((target) => {
+//     observer.observe(target);
+// })
 
 
-    // const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.img',
-    //         scrub: true
-    //         // markers: true
-    //     }
-    // })
-    //     .from('.img', {
-    //         stagger: .2,
-    //         x: '100%'
-    //     })
-    // .to('.img', {
-    //     stagger: .2,
-    //     y: -700
-    // })
+// const tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.img',
+//         scrub: true
+//         // markers: true
+//     }
+// })
+//     .from('.img', {
+//         stagger: .2,
+//         x: '100%'
+//     })
+// .to('.img', {
+//     stagger: .2,
+//     y: -700
+// })
 
 
 //     return () => {

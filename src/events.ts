@@ -5,6 +5,30 @@ export const events: {
   href?: string;
 }[] = [
   {
+    title: "",
+    date: "Sábado, 04 Octubre 2023. Atenas, Grecia.",
+    image: "/images/Stelios_Vassiloudis_portada.jpeg",
+    href: "https://www.instagram.com/p/CyU_ue-uCKH/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "Brodinski",
+    date: "Sábado, 07 Octubre 2023. Happy Birthday Fito Favela, Jony Gonzales",
+    image: "/images/Brodinski_portada.png",
+    href: "https://www.instagram.com/p/Cx8onStOZOA/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "Theus Mago",
+    date: "Sábado, 23 Septiembre 2023.",
+    image: "/images/Theus_portada.png",
+    href: "https://www.instagram.com/p/CxbVEWjpC10/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "RITUAL",
+    date: "Sábado, 09 Septiembre 2023. Happy Birthday Gus Favela",
+    image: "/images/Ritual_portada.png",
+    href: "https://www.instagram.com/p/CwnPFdTu56_/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
     title: "Red Jungle",
     date: "Sábado, 05 Agosto 2023. Happy Birthday Francisco Diez",
     image: "/images/Red_Jungle_portada.png",

@@ -6,38 +6,68 @@ import { Tilt } from 'react-tilt';
 
 // will receive props
 
+// const event = {
+//     img: '/redjungle.png',
+//     slogan: '#BIMTENYEARS',
+//     title: 'BORN IN MEXICO 10 YEARS',
+//     date: 'sábado 19 de agosto',
+//     color: '#575757',
+//     description: 'La séptima fiesta del aniversario 10 de BORN IN MEXICO llega a XAMICALLI, una fiesta que sin duda no te puedes perder.',
+//     djs: [
+//         {
+//             name: 'mysteryaffair',
+//             to: 'https://www.instagram.com/mysteryaffair/'
+//         },
+//         {
+//             name: 'vongold',
+//             to: 'https://www.instagram.com/vongold_/'
+//         },
+//     ],
+//     tickets: 'https://www.eventbrite.com.mx/e/born-in-mexico-10-years-tickets-679828233547',
+//     flyer: '/flyer.png',
+//     patrons: [
+//         {
+//             name: 'jagermeistermx',
+//             to: 'https://www.instagram.com/jagermeistermx/'
+//         },
+//         {
+//             name: 'redbullmexico',
+//             to: 'https://www.instagram.com/redbullmexico/'
+//         },
+//         {
+//             name: 'dosequismx',
+//             to: 'https://www.instagram.com/dosequismx/'
+//         },
+//     ],
+// }
 const event = {
     img: '/redjungle.png',
-    slogan: '#BIMTENYEARS',
-    title: 'BORN IN MEXICO 10 YEARS',
-    date: 'sábado 19 de agosto',
-    color: '#575757',
-    description: 'La séptima fiesta del aniversario 10 de BORN IN MEXICO llega a XAMICALLI, una fiesta que sin duda no te puedes perder.',
+    slogan: 'Fiesta de disfrazes',
+    title: 'Halloween',
+    date: '27 y 28 de Octubre',
+    color: '#980B8E',
+    description: 'Halloween 2023, 27 y 28 de Octubre. Fiesta de Disfraces con premio al mejor disfraz.',
     djs: [
-        {
-            name: 'mysteryaffair',
-            to: 'https://www.instagram.com/mysteryaffair/'
-        },
-        {
-            name: 'vongold',
-            to: 'https://www.instagram.com/vongold_/'
-        },
+        // {
+        //     name: '',
+        //     to: ''
+        // },
     ],
-    tickets: 'https://www.eventbrite.com.mx/e/born-in-mexico-10-years-tickets-679828233547',
-    flyer: '/flyer.png',
+    tickets: 'https://www.facebook.com/photo?fbid=716405060515852&set=a.556371353185891',
+    flyer: '/flyer.jpeg',
     patrons: [
-        {
-            name: 'jagermeistermx',
-            to: 'https://www.instagram.com/jagermeistermx/'
-        },
-        {
-            name: 'redbullmexico',
-            to: 'https://www.instagram.com/redbullmexico/'
-        },
-        {
-            name: 'dosequismx',
-            to: 'https://www.instagram.com/dosequismx/'
-        },
+        // {
+        //     name: 'jagermeistermx',
+        //     to: 'https://www.instagram.com/jagermeistermx/'
+        // },
+        // {
+        //     name: 'redbullmexico',
+        //     to: 'https://www.instagram.com/redbullmexico/'
+        // },
+        // {
+        //     name: 'dosequismx',
+        //     to: 'https://www.instagram.com/dosequismx/'
+        // },
     ],
 }
 export const NextEvent = () => {
@@ -63,36 +93,36 @@ export const NextEvent = () => {
             </Tilt>
             {/* <EventInfo /> */}
             <div className='my-5 w-[500px] max-w-[95%] flex flex-col items-center gap-4 text-center text-white text-sm'>
-                <h2 className='text-2xl text-[#ff7b00]'>{title}</h2>
+                <h2 className='text-2xl text-[#980B8E]'>{title}</h2>
                 <p className='text-sm' >{description}</p>
                 <ul className='mt-3 text-lg' >
-                    {djs.map((dj, i) => (
+                    {/* {djs.map((dj, i) => (
                         <li key={i}>
                             <a href={dj.to}
                                 target="_blank"
                                 rel="noreferrer"
-                                className='text-[#ff7b00] hover:text-white underline'
+                                className='text-[#980B8E] hover:text-white underline'
                             >
                                 @{dj.name}
                             </a>
                         </li>
-                    ))}
+                    ))} */}
                 </ul>
                 <ul>
-                    {patrons.map((patron, i) => (
+                    {/* {patrons.map((patron, i) => (
                         <li key={i}>
                             <a href={patron.to}
                                 target="_blank"
                                 rel="noreferrer"
-                                className='text-white hover:text-[#ff7b00]'
+                                className='text-white hover:text-[#980B8E]'
                             >
                                 @{patron.name}
                             </a>
                         </li>
-                    ))}
+                    ))} */}
                 </ul>
                 <div className='flex flex-wrap items-center justify-center gap-4 mt-3' >
-                    <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#ff7b00] py-2 px-5 flex-1 rounded-sm bg-[#ff7b00] hover:bg-white'>Tickets</a>
+                    <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#980B8E] py-2 px-5 flex-1 rounded-sm bg-[#980B8E] hover:bg-white'>Ver Evento</a>
                 </div>
             </div>
             <div className='w-full overflow-hidden' >
