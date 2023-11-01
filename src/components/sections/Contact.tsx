@@ -11,51 +11,56 @@ import { ContactForm } from './ContactForm';
 export const Contact = () => {
 
     const nexusRef = useRef<HTMLDivElement | null>(null);
-    const mapRef = useRef<HTMLDivElement | null>(null);
+    // const mapRef = useRef<HTMLDivElement | null>(null);
 
-    useLayoutEffect(() => {
+    // useLayoutEffect(() => {
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: nexusRef.current,
-                start: 'top bottom',
-                end: 'top top-=1000',
-                scrub: true,
-            }
-        })
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: nexusRef.current,
+    //             start: 'top bottom',
+    //             end: 'top top-=1000',
+    //             scrub: true,
+    //         }
+    //     })
 
-        gsap.fromTo(mapRef.current, {
-            rotateX: '220deg',
-            rotateY: '25deg'
-        }, {
-            rotateX: '220deg',
-            rotateY: '25deg'
-        })
+    //     gsap.fromTo(mapRef.current, {
+    //         rotateX: '220deg',
+    //         rotateY: '25deg'
+    //     }, {
+    //         rotateX: '220deg',
+    //         rotateY: '25deg'
+    //     })
 
-        tl.fromTo(nexusRef.current, {
-            // rotateX: 80,
-            // rotateY: -30,
-            // rotate: -4
-        }, {
-            // rotateX: 80,
-            // rotateY: -30,
-            // rotate: -4
-        })
+    //     tl.fromTo(nexusRef.current, {
+    //         // rotateX: 80,
+    //         // rotateY: -30,
+    //         // rotate: -4
+    //     }, {
+    //         // rotateX: 80,
+    //         // rotateY: -30,
+    //         // rotate: -4
+    //     })
 
-        return () => {
+    //     return () => {
 
-        };
-    }, []);
+    //     };
+    // }, []);
 
 
     return (
         <section id='contacto' className='flex flex-wrap gap-8 md:gap-16 justify-center items-center md:justify-between w-[1200px] mx-auto max-w-full md:h-[1000px] p-4'>
-            <div ref={mapRef} className='aspect-square w-[100%] md:w-[50%] relative md:-translate-x-1/4 md:scale-[1.3] top-10 max-w-full rounded-full overflow-hidden p-10 bg-[#F1F3F4] map' >
+            {/* <div ref={mapRef} className='aspect-square w-[100%] md:w-[50%] relative md:-translate-x-1/4 md:scale-[1.3] top-10 max-w-full rounded-full overflow-hidden p-10 bg-[#F1F3F4] map' >
                 <iframe
                     className='relative w-full h-full rotate-180 -scale-x-105 '
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.211658742621!2d-104.6735233!3d24.023600199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc8162b3c4ef9%3A0x1b111c035ce7a813!2sXAMICALLI!5e0!3m2!1ses-419!2smx!4v1692313049238!5m2!1ses-419!2smx" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div> */}
+            <div className='aspect-square w-[100%] md:w-[50%] relative top-10 max-w-full' >
+                <iframe
+                    className='relative w-full h-full'
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.211658742621!2d-104.6735233!3d24.023600199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc8162b3c4ef9%3A0x1b111c035ce7a813!2sXAMICALLI!5e0!3m2!1ses-419!2smx!4v1692313049238!5m2!1ses-419!2smx" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div className='max-w-full w-[400px] py-3 px-4'>
+            <div className='max-w-full w-[400px] md:mt-0 mt-8 py-3 px-4'>
                 <h3 className='text-4xl font-thin text-white uppercase'>Contacto</h3>
                 <div className='flex flex-col gap-3 mt-5' >
 
