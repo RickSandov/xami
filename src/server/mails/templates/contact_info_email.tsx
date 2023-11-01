@@ -19,7 +19,7 @@ import {
 } from '@react-email/components';
 import * as React from 'react';
 
-export function ContactInfoEmail({ name, message, phoneNumber }: IContactInfo) {
+export function ContactInfoEmail({ name, message, phoneNumber, email }: IContactInfo) {
   const previewText = `Solicitud de consulta ${name}, ${phoneNumber}.`
 
   return (
@@ -45,7 +45,7 @@ export function ContactInfoEmail({ name, message, phoneNumber }: IContactInfo) {
               <strong className="text-[#ff7b00]" >Número de contacto: </strong> {phoneNumber}
             </Text>
             <Text className="text-white text-[14px] leading-[24px]">
-              <strong className="text-[#ff7b00]" >Email: </strong> {phoneNumber}
+              <strong className="text-[#ff7b00]" >Email: </strong> {email}
             </Text>
             <Text className="text-white text-[14px] leading-[24px]">
               <strong className="text-[#ff7b00]" >Mensaje: </strong>
