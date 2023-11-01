@@ -53,7 +53,7 @@ const Events = () => {
 
     return (
         <section id='eventos' className='inset-0 flex flex-col items-center justify-center p-4 py-16 mt-24 relative -top-[100px]' >
-            <h1 ref={titleRef} className='mb-8 text-5xl text-center text-white uppercase'> Eventos</h1>
+            <h1 ref={titleRef} className='mb-8 text-5xl text-center text-white uppercase'> Eventos Pasados</h1>
             <ul ref={listRef} className='grid w-full gap-8 grid-cols-auto-fill auto-rows-auto'>
                 {visibleEvents.map((event, index) => (
                     <li className='relative w-full overflow-hidden text-white h-44 img event-item' key={index} >

@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import React, { useLayoutEffect, useRef } from 'react'
 import { Facebook } from '../svg/Facebook';
 import { Instagram } from '../svg/Instagram';
+import { ContactForm } from './ContactForm';
 
 
 
@@ -48,7 +49,7 @@ export const Contact = () => {
 
 
     return (
-        <section id='contacto' className='flex flex-wrap gap-5 md:gap-10 justify-center items-center md:justify-between w-[1200px] mx-auto max-w-full h-[640px] p-4'>
+        <section id='contacto' className='flex flex-wrap gap-8 md:gap-16 justify-center items-center md:justify-between w-[1200px] mx-auto max-w-full md:h-[1000px] p-4'>
             <div ref={mapRef} className='aspect-square w-[100%] md:w-[50%] relative md:-translate-x-1/4 md:scale-[1.3] top-10 max-w-full rounded-full overflow-hidden p-10 bg-[#F1F3F4] map' >
                 <iframe
                     className='relative w-full h-full rotate-180 -scale-x-105 '
@@ -57,16 +58,18 @@ export const Contact = () => {
             <div className='max-w-full w-[400px] py-3 px-4'>
                 <h3 className='text-4xl font-thin text-white uppercase'>Contacto</h3>
                 <div className='flex flex-col gap-3 mt-5' >
-                    <div className='mt-3' >
-                        <p className='font-thin text-white'>BOOKING</p>
-                        <a href="mailto:gusfavela@xamicalli.com" className='font-bold text-[#3271E9]' >gusfavela@xamicalli.com</a>
-                    </div>
+
                     <ul className='flex gap-3' >
                         <li className='w-8 h-8 fill-white stroke-white' ><a href="https://www.instagram.com/xamicalli/" target="_blank" rel="noreferrer" > <Instagram />
                         </a></li>
                         <li className='w-8 h-8 fill-white hover:fill-[#3b5998]' ><a href="https://www.facebook.com/xamicalli" target="_blank" rel="noreferrer" > <Facebook />
                         </a></li>
                     </ul>
+                    <div className='my-3' >
+                        <p className='font-thin text-white'>BOOKING</p>
+                        <a href="mailto:gusfavela@xamicalli.com" className='font-bold text-[#3271E9]' >gusfavela@xamicalli.com</a>
+                    </div>
+                    <ContactForm />
                 </div>
             </div>
         </section>
