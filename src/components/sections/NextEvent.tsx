@@ -54,7 +54,7 @@ const event = {
         // },
     ],
     tickets: 'https://www.facebook.com/photo?fbid=716405060515852&set=a.556371353185891',
-    flyer: '/flyer.jpeg',
+    flyer: '/flyer.png',
     patrons: [
         // {
         //     name: 'jagermeistermx',
