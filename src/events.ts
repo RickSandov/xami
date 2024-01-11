@@ -5,16 +5,26 @@ export const events: {
   href?: string;
 }[] = [
   {
-    title: "",
-    date: "Sábado, 04 Octubre 2023. Atenas, Grecia.",
-    image: "/images/Stelios_Vassiloudis_portada.jpeg",
-    href: "https://www.instagram.com/p/CyU_ue-uCKH/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    title: "María Noche y Día",
+    date: "Sábado, 16 Diciembre 2023. Kaylux.",
+    image: "/images/Marianocheydia_portada.png",
+  },
+  {
+    title: "Xalloween",
+    date: "27 / 28 Octubre 2023. Fiesta de dizfraces.",
+    image: "/images/Xalloween2023_portada.png",
   },
   {
     title: "Brodinski",
     date: "Sábado, 07 Octubre 2023. Happy Birthday Fito Favela, Jony Gonzales",
     image: "/images/Brodinski_portada.png",
     href: "https://www.instagram.com/p/Cx8onStOZOA/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "Stelios Vassiloudis",
+    date: "Sábado, 04 Octubre 2023. Atenas, Grecia.",
+    image: "/images/Stelios_Vassiloudis_portada.jpeg",
+    href: "https://www.instagram.com/p/CyU_ue-uCKH/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
   },
   {
     title: "Theus Mago",
@@ -27,6 +37,11 @@ export const events: {
     date: "Sábado, 09 Septiembre 2023. Happy Birthday Gus Favela",
     image: "/images/Ritual_portada.png",
     href: "https://www.instagram.com/p/CwnPFdTu56_/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "BIM Ten Years",
+    date: "Sábado, 19 Agosto 2023. Happy Birthday Francisco Diez",
+    image: "/images/BIM_Ten_Years_portada.png",
   },
   {
     title: "Red Jungle",

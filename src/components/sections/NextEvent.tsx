@@ -42,18 +42,18 @@ import { Tilt } from 'react-tilt';
 // }
 const event = {
     img: '/redjungle.png',
-    slogan: 'Fiesta de disfrazes',
-    title: 'Halloween',
-    date: '27 y 28 de Octubre',
-    color: '#980B8E',
-    description: 'Halloween 2023, 27 y 28 de Octubre. Fiesta de Disfraces con premio al mejor disfraz.',
+    slogan: 'Adam Ten',
+    title: 'Adam Ten',
+    date: 'Sábado, 13 de Enero',
+    color: '#9E3F3F',
+    description: 'Desde Tel Aviv, ADAM TEN nos visita para el cierre de los festejos de XAMICALLI 8, una noche que sin duda será inolvidable.',
     djs: [
         // {
         //     name: '',
         //     to: ''
         // },
     ],
-    tickets: 'https://www.facebook.com/photo?fbid=716405060515852&set=a.556371353185891',
+    tickets: 'https://www.eventbrite.com.mx/e/adam-ten-tickets-779776972917',
     flyer: '/flyer.png',
     patrons: [
         // {
@@ -72,7 +72,7 @@ const event = {
 }
 export const NextEvent = () => {
 
-    const { title, description, djs, tickets, flyer, patrons } = event;
+    const { title, description, djs, tickets, flyer, patrons, color } = event;
 
     const defaultOptions = {
         reverse: false,  // reverse the tilt direction
@@ -93,7 +93,7 @@ export const NextEvent = () => {
             </Tilt>
             {/* <EventInfo /> */}
             <div className='my-5 w-[500px] max-w-[95%] flex flex-col items-center gap-4 text-center text-white text-sm'>
-                <h2 className='text-2xl text-[#980B8E]'>{title}</h2>
+                <h2 className='text-2xl text-[#9E3F3F]'>{title}</h2>
                 <p className='text-sm' >{description}</p>
                 <ul className='mt-3 text-lg' >
                     {/* {djs.map((dj, i) => (
@@ -101,7 +101,7 @@ export const NextEvent = () => {
                             <a href={dj.to}
                                 target="_blank"
                                 rel="noreferrer"
-                                className='text-[#980B8E] hover:text-white underline'
+                                className='text-[#9E3F3F] hover:text-white underline'
                             >
                                 @{dj.name}
                             </a>
@@ -114,7 +114,7 @@ export const NextEvent = () => {
                             <a href={patron.to}
                                 target="_blank"
                                 rel="noreferrer"
-                                className='text-white hover:text-[#980B8E]'
+                                className='text-white hover:text-[#9E3F3F]'
                             >
                                 @{patron.name}
                             </a>
@@ -122,7 +122,7 @@ export const NextEvent = () => {
                     ))} */}
                 </ul>
                 <div className='flex flex-wrap items-center justify-center gap-4 mt-3' >
-                    <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#980B8E] py-2 px-5 flex-1 rounded-sm bg-[#980B8E] hover:bg-white'>Ver Evento</a>
+                    <a href={tickets} target="_blank" rel="noreferrer" className='text-white w-[200px] max-w-full transition-colors hover:text-[#9E3F3F] py-2 px-5 flex-1 rounded-sm bg-[#9E3F3F] hover:bg-white'>Tickets</a>
                 </div>
             </div>
             <div className='w-full overflow-hidden' >
