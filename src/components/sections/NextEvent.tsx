@@ -54,7 +54,7 @@ const event = {
         // },
     ],
     tickets: 'https://www.eventbrite.com.mx/e/adam-ten-tickets-779776972917',
-    flyer: '/flyer.png',
+    flyer: '/flyer1.png',
     patrons: [
         // {
         //     name: 'jagermeistermx',
